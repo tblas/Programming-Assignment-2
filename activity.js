@@ -1,0 +1,24 @@
+var win2 = Titanium.UI.createWindow ({
+	title:'You made it',
+	backgroundColor:'#fff'
+});
+var label1 = Titanium.UI.createLabel ({
+		color: '#999',
+	text:'I am Window 1',
+	font:{fontSize:20,fontFamily: 'Helvetica Neue'},
+	textAlign: 'center',
+	width: 'auto'
+});
+
+win1.add(label1);
+
+var switchOrientation = Ti.UI.createButton ({title:'Make Landspace'});
+switchOrientation.addEventListener('click',rotateLayout);
+
+var layout = Ti.UI.createView ({layout:'vertical'});
+layout.add(switchOrientation);
+
+function rotateLayout(){
+	win1.orientationModes = (Ti.UI.LANDSCAPE_LEFT);
+	switchOrientation.hide();
+}
