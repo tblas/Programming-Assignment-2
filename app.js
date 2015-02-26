@@ -1,5 +1,3 @@
-# Programming-Assignment-2
-
 Ti.include('activity.js'); 
 var win1 = Titanium.UI.createWindow({
 	title:'Tab 1',
